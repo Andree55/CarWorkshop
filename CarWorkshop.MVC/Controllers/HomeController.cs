@@ -35,6 +35,16 @@ public class HomeController : Controller
         };
         return View(model);
     }
+    public IActionResult About()
+    {
+        var model = new About() 
+        {
+            Title = "CarWorkShopApplication",
+            Description = "Some description",
+            Tags = new List<string>(){"car","app","free"}
+        };
+        return View(model);
+    }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
