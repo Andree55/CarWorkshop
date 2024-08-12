@@ -5,11 +5,11 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarWorkshop.MVC", "CarWorkshop.MVC\CarWorkshop.MVC.csproj", "{DB306874-64DD-48C8-9525-A5B51EB35733}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarWorkShop.Domain", "CarWorkShop.Domain\CarWorkShop.Domain.csproj", "{7565D867-8E4E-45FD-B8D5-AAD90789FB8B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarWorkshop.Domain", "CarWorkShop.Domain\CarWorkshop.Domain.csproj", "{7565D867-8E4E-45FD-B8D5-AAD90789FB8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarWorkShop.Application", "CarWorkShop.Application\CarWorkShop.Application.csproj", "{4881D912-3B94-49FF-8D04-AF7ED63D9901}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarWorkshop.Application", "CarWorkShop.Application\CarWorkshop.Application.csproj", "{4881D912-3B94-49FF-8D04-AF7ED63D9901}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarWorkShop.Infrastructure", "CarWorkShop.Infrastructure\CarWorkShop.Infrastructure.csproj", "{5CFD7ABE-25F7-43E6-86C9-9D84BD2E0824}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarWorkshop.Infrastructure", "CarWorkShop.Infrastructure\CarWorkshop.Infrastructure.csproj", "{5CFD7ABE-25F7-43E6-86C9-9D84BD2E0824}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
