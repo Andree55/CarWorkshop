@@ -22,7 +22,7 @@ namespace CarWorkshop.MVC.Controllers
         public async Task<IActionResult> Create(Domain.Entities.CarWorkshop carWorkshop)
         {
             await _carWorkshopService.Create(carWorkshop);
-            return RedirectToAction(nameof(Create));
+            return RedirectToAction(nameof(Create)); // TODO: Refactor
         }
     }
 }
