@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CarWorkshop.Application.CarWorkshop.Commands.CreateCarWorkshop
 {
-    internal class CreateCarWorkshopCommand:CarWorkshopDto,IRequest
+    public class CreateCarWorkshopCommand:CarWorkshopDto,IRequest
     {
     }
 }

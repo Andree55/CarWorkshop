@@ -6,11 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarWorkshop.Application.CarWorkshop
+namespace CarWorkshop.Application.CarWorkshop.Commands.CreateCarWorkshop
 {
-    internal class CarWorkshopDtoValidator:AbstractValidator<CarWorkshopDto>
+    public class CreateCarWorkshopCommandValidator : AbstractValidator<CreateCarWorkshopCommand>
     {
-        public CarWorkshopDtoValidator(ICarWorkshopRepository repository)
+        public CreateCarWorkshopCommandValidator(ICarWorkshopRepository repository)
         {
             RuleFor(c => c.Name)
                 .NotEmpty()
