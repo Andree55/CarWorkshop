@@ -28,6 +28,7 @@ namespace CarWorkshop.Application.Mappings
                 .ForMember(dto => dto.PostalCode, opt => opt.MapFrom(src => src.ContactDetails.PostalCode))
                 .ForMember(dto => dto.PhoneNumber, opt => opt.MapFrom(src => src.ContactDetails.PhoneNumber));
 
+
         }
     }
 }
