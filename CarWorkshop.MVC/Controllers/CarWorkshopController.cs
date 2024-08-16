@@ -7,6 +7,7 @@ using CarWorkshop.Application.CarWorkshop.Commands.CreateCarWorkshop;
 using CarWorkshop.Application.CarWorkshop.Queries.GetCarWorkshopByEncodedName;
 using CarWorkshop.Application.CarWorkshop.Commands.EditCarWorkshop;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CarWorkshop.MVC.Controllers
 {
@@ -25,10 +26,7 @@ namespace CarWorkshop.MVC.Controllers
             var carWorkshop = await _mediator.Send(new GetAllCarWorkshopsQuery());
             return View(carWorkshop);
         }
-        public IActionResult Create()
-        {
-            return View();
-        }
+        
         [Route("CarWorkshop/{encodedName}/Details")]
         public async Task <IActionResult> Details(string encodedName)
         {
@@ -56,7 +54,14 @@ namespace CarWorkshop.MVC.Controllers
             await _mediator.Send(command);
             return RedirectToAction(nameof(Index)); 
         }
+        [Authorize]
+        public IActionResult Create()
+        {
+            return View();
+        }
+        
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> Create(CreateCarWorkshopCommand command)
         {
             if(!ModelState.IsValid)
