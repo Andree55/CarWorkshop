@@ -8,6 +8,9 @@ using CarWorkshop.Application.CarWorkshop.Queries.GetCarWorkshopByEncodedName;
 using CarWorkshop.Application.CarWorkshop.Commands.EditCarWorkshop;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
+using CarWorkshop.MVC.Models;
+using Newtonsoft.Json;
+using CarWorkshop.MVC.Extensions;
 
 namespace CarWorkshop.MVC.Controllers
 {
@@ -66,14 +69,17 @@ namespace CarWorkshop.MVC.Controllers
         }
         
         [HttpPost]
-        [Authorize]
+        [Authorize(Roles = "Owner")]
         public async Task<IActionResult> Create(CreateCarWorkshopCommand command)
         {
             if(!ModelState.IsValid)
             {
                 return View(command);
             }
-            await _mediator.Send(command);
+            //await _mediator.Send(command);
+
+            this.SetNotification("success", $"Created carworkshop: {command.Name}");
+
             return RedirectToAction(nameof(Index)); 
         }
     }
