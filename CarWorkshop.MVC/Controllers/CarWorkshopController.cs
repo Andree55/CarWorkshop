@@ -58,7 +58,7 @@ namespace CarWorkshop.MVC.Controllers
             await _mediator.Send(command);
             return RedirectToAction(nameof(Index)); 
         }
-        [Authorize]
+        [Authorize(Roles ="Owner")]
         public IActionResult Create()
         {
             return View();
