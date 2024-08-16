@@ -1,4 +1,5 @@
-﻿using CarWorkshop.Application.ApplicationUser;
+﻿using AutoMapper;
+using CarWorkshop.Application.ApplicationUser;
 using CarWorkshop.Application.CarWorkshop.Commands.CreateCarWorkshop;
 using CarWorkshop.Application.Mappings;
 using FluentValidation;
@@ -11,7 +12,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static CarWorkshop.Application.ApplicationUser.UserContext;
+using static CarWorkshop.Application.ApplicationUser.userContext;
 
 namespace CarWorkshop.Application.Extensions
 {
@@ -19,10 +20,17 @@ namespace CarWorkshop.Application.Extensions
     {
         public static void AddApplication(this IServiceCollection services)
         {
-            services.AddScoped<IUserContext, UserContext>();
+            services.AddScoped<IUserContext, userContext>();
             services.AddMediatR(typeof(CreateCarWorkshopCommand));
 
-            services.AddAutoMapper(typeof(CarWorkshopMappingProfile));
+            services.AddScoped(provider => new MapperConfiguration(cfg =>
+            {
+                var scope = provider.CreateScope();
+                var userContext = scope.ServiceProvider.GetRequiredService<IUserContext>();
+                cfg.AddProfile(new CarWorkshopMappingProfile(userContext));
+            })
+            .CreateMapper()
+            );
 
             services.AddValidatorsFromAssemblyContaining<CreateCarWorkshopCommandValidator>()
                    .AddFluentValidationAutoValidation()
