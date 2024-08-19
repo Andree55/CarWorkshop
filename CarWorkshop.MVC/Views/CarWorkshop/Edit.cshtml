@@ -1,4 +1,5 @@
-﻿@model CarWorkshop.Application.CarWorkshop.Commands.EditCarWorkshop.EditCarWorkshopCommand
+﻿@using CarWorkshop.Application.CarWorkshopService.Commands
+@model CarWorkshop.Application.CarWorkshop.Commands.EditCarWorkshop.EditCarWorkshopCommand
 
 @{
     ViewData["Title"] = "Edit";
@@ -48,8 +49,13 @@
     </div>
 </div>
 
+
+
+
+
 <div>
-    <a class="btn btn-outline-secondary" asp-controller="CarWorkshop" asp-action="Edit" asp-route-encodedName="@Model.EncodedName">Edit</a>
+    <partial name="_CreateCarWorkshopService" model="new CreateCarWorkshopServiceCommand(){CarWorkshopEncodedName=Model.EncodedName}" />
+    <a asp-action="Index" class="btn btnalert-secondary">Back to List </a>
 </div>
 
 @section Scripts {
