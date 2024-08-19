@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Authorization;
 using CarWorkshop.MVC.Models;
 using Newtonsoft.Json;
 using CarWorkshop.MVC.Extensions;
+using CarWorkshop.Application.CarWorkshopService.Commands;
 
 namespace CarWorkshop.MVC.Controllers
 {
@@ -81,6 +82,20 @@ namespace CarWorkshop.MVC.Controllers
             this.SetNotification("success", $"Created carworkshop: {command.Name}");
 
             return RedirectToAction(nameof(Index)); 
+        }
+        
+        [HttpPost]
+        [Authorize(Roles = "Owner")]
+        [Route("CarWorkshop/CarWorkshopService")]
+        public async Task<IActionResult> CreateCarWorkshopService(CreateCarWorkshopServiceCommand command)
+        {
+            if(!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            await _mediator.Send(command);
+
+            return Ok();
         }
     }
 }
