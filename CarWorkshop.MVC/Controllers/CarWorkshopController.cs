@@ -77,7 +77,7 @@ namespace CarWorkshop.MVC.Controllers
             {
                 return View(command);
             }
-            //await _mediator.Send(command);
+            await _mediator.Send(command);
 
             this.SetNotification("success", $"Created carworkshop: {command.Name}");
 
