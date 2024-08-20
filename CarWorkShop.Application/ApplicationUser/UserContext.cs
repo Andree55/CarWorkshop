@@ -5,11 +5,12 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
-using static CarWorkshop.Application.ApplicationUser.userContext;
+using static CarWorkshop.Application.ApplicationUser.UserContext;
+
 
 namespace CarWorkshop.Application.ApplicationUser
 {
-    public class userContext : IUserContext
+    public class UserContext : IUserContext
     {
         public interface IUserContext
         {
@@ -17,7 +18,7 @@ namespace CarWorkshop.Application.ApplicationUser
         }
         private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public userContext(IHttpContextAccessor httpContextAccessor)
+        public UserContext(IHttpContextAccessor httpContextAccessor)
         {
             _httpContextAccessor = httpContextAccessor;
         }

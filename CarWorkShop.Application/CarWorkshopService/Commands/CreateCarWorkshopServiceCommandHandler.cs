@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static CarWorkshop.Application.ApplicationUser.userContext;
+using static CarWorkshop.Application.ApplicationUser.UserContext;
 
 namespace CarWorkshop.Application.CarWorkshopService.Commands
 {

@@ -12,7 +12,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static CarWorkshop.Application.ApplicationUser.userContext;
+using static CarWorkshop.Application.ApplicationUser.UserContext;
 
 namespace CarWorkshop.Application.Extensions
 {
@@ -20,7 +20,7 @@ namespace CarWorkshop.Application.Extensions
     {
         public static void AddApplication(this IServiceCollection services)
         {
-            services.AddScoped<IUserContext, userContext>();
+            services.AddScoped<IUserContext, UserContext>();
             services.AddMediatR(typeof(CreateCarWorkshopCommand));
 
             services.AddScoped(provider => new MapperConfiguration(cfg =>
