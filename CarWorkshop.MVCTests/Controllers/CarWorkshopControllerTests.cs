@@ -16,7 +16,7 @@ using System.Net;
 
 namespace CarWorkshop.MVC.Controllers.Tests
 {
-    public class CarWorkshopControllerTests : IClassFixture<WebApplicationFactory<Program>>
+    public class CarWorkshopControllerTests : IClassFixture<WebApplicationFactory<Program
     {
         private readonly WebApplicationFactory<Program> _factory;
 
