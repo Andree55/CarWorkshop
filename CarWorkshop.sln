@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarWorkshop.Infrastructure"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarWorkshop.DomainTests", "CarWorkshop.DomainTests\CarWorkshop.DomainTests.csproj", "{67CEA4A9-2B0E-44FF-A7DB-877262AD113A}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarWorkshop.ApplicationTests", "CarWorkshop.ApplicationTests\CarWorkshop.ApplicationTests.csproj", "{2F97F1F2-93B4-446F-8D49-643D076035B9}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7F6D055B-1182-46A2-8479-FB7EC1977978}"
 	ProjectSection(SolutionItems) = preProject
 		CarWorkshop.MVCTests\Controllers\HomeControllerTests.cs = CarWorkshop.MVCTests\Controllers\HomeControllerTests.cs
