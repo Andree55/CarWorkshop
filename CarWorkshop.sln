@@ -20,7 +20,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7F6D055B
 		CarWorkshop.MVCTests\Controllers\HomeControllerTests.cs = CarWorkshop.MVCTests\Controllers\HomeControllerTests.cs
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarWorkshop.MVCTests", "CarWorkshop.MVCTests\CarWorkshop.MVCTests.csproj", "{6DEFCB6B-8333-4458-8C96-6C90032C60DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarWorkshop.MVCTests", "CarWorkshop.MVCTests\CarWorkshop.MVCTests.csproj", "{6DEFCB6B-8333-4458-8C96-6C90032C60DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -62,7 +62,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{67CEA4A9-2B0E-44FF-A7DB-877262AD113A} = {7F6D055B-1182-46A2-8479-FB7EC1977978}
-		{2F97F1F2-93B4-446F-8D49-643D076035B9} = {7F6D055B-1182-46A2-8479-FB7EC1977978}
 		{6DEFCB6B-8333-4458-8C96-6C90032C60DB} = {7F6D055B-1182-46A2-8479-FB7EC1977978}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
