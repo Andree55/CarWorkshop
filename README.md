@@ -48,20 +48,11 @@ The **CarWorkshop** application supports three main user roles: **Owner**, **Mod
   - **Order Overview**: View repair orders assigned to them.
   - **Vehicle Overview**: Browse related vehicle data without editing privileges.
 
-## Technologies and Tools
-
-- **ASP.NET Core MVC**: The primary framework used for building the application.
-- **Entity Framework Core**: Used for managing the database through object-relational mapping (ORM).
-- **SQL Server**: Database for storing customer, vehicle, and order data.
-- **Bootstrap**: CSS framework for creating a responsive, modern UI.
-- **Git**: Version control for managing source code.
-- **Visual Studio**: Development environment for implementing the application.
-
 ## Sample Screenshots
 
 Below are examples of the application screens:
 
-- **Order List**: A view displaying a list of all repair orders.
+- **Car Workshops**: A view displaying a list of all CarWorkshops.
   
   ![Order List](https://github.com/user-attachments/assets/891a8c15-89fb-437e-80e3-1595db4a911b)
 
@@ -72,6 +63,15 @@ Below are examples of the application screens:
 - **Edit CarWorkshop Form**: A view that allows editing a CarWorkshop in the system.
   
   ![Edit CarWorkshop](https://github.com/user-attachments/assets/6fe3860b-4afe-4edf-8356-5b1d55ed6dc6)
+
+ ## Technologies and Tools
+
+- **ASP.NET Core MVC**: The primary framework used for building the application.
+- **Entity Framework Core**: Used for managing the database through object-relational mapping (ORM).
+- **SQL Server**: Database for storing customer, vehicle, and order data.
+- **Bootstrap**: CSS framework for creating a responsive, modern UI.
+- **Git**: Version control for managing source code.
+- **Visual Studio**: Development environment for implementing the application.
 
 ## Future Development
 
